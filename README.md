@@ -1,2 +1,2 @@
 # Hi-NeuS
-Homepage: https://vlis2022.github.io/Hi-NeuS
+Homepage: https://vlislab22.github.io/Hi-NeuS
