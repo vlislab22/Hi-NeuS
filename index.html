@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+    content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="H-NeuS, SDF, Geometry, Mask-free Surface Reconstruction">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>High-Fidelity Mask-free Neural Surface Reconstruction for Virtual Reality</title>
@@ -23,15 +24,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -42,76 +41,79 @@
   <script src="./static/js/index.js"></script>
   <script src="./static/js/video_comparison.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://hbai98.github.io/">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://hbai98.github.io/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://vlis2022.github.io/DOT">
-            DOT
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://vlis2022.github.io/fmap/">
-            Hi-Map
-          </a>
-          <a class="navbar-item" href="https://vlis2022.github.io/componerf">
-            Componerf
-          </a>
-          <a class="navbar-item" href="https://vlis2022.github.io/cvpr23/PMTrans.html">
-            PatchMix
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://vlis2022.github.io/DOT">
+              DOT
+            </a>
+            <a class="navbar-item" href="https://vlis2022.github.io/fmap/">
+              Hi-Map
+            </a>
+            <a class="navbar-item" href="https://vlis2022.github.io/componerf">
+              Componerf
+            </a>
+            <a class="navbar-item" href="https://vlis2022.github.io/cvpr23/PMTrans.html">
+              PatchMix
+            </a>
+          </div>
         </div>
       </div>
+
     </div>
-
-  </div>
-</nav>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><img src="static/images/hi.png" alt="hi-image" style="width:80px;height:80px;vertical-align:middle;">High-Fidelity Mask-free Neural Surface Reconstruction for Virtual Reality</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://hbai98.github.io/">Haotian Bai</a><sup>1</sup>,</span>
-            <span class="author-block">
-            <span class="author-block">
-              <a href="https://sites.google.com/view/yizechen">Yize Chen</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://vlislab22.github.io/vlislab/linwang.html">Lin Wang</a><sup>1,3</sup>,
-            </span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Hongkong University of Science and Technology(Guangzhou),</span>
-            <span class="author-block"><sup>2</sup>University of Alberta, </span> 
-            <span class="author-block"><sup>3</sup>Hongkong University of Science and Technology</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
+            <h1 class="title is-1 publication-title"><img src="static/images/hi.png" alt="hi-image"
+                style="width:80px;height:80px;vertical-align:middle;">High-Fidelity Mask-free Neural Surface
+              Reconstruction for Virtual Reality</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://hbai98.github.io/">Haotian Bai</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <span class="author-block">
+                  <a href="https://sites.google.com/view/yizechen">Yize Chen</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://vlislab22.github.io/vlislab/linwang.html">Lin Wang</a><sup>1,3</sup>,
+                </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Hongkong University of Science and Technology(Guangzhou),</span>
+              <span class="author-block"><sup>2</sup>University of Alberta, </span>
+              <span class="author-block"><sup>3</sup>Hongkong University of Science and Technology</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -120,48 +122,43 @@
                   <span>Paper</span>
                 </a>
               </span> -->
-              <span class="link-block">
-                <a href="./static/videos/hi-neus.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <span class="link-block">
+                  <a href="./static/videos/hi-neus.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="http://arxiv.org/abs/2409.13158"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youtu.be/hrkM5N7AltY"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <!-- <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark"> -->
-                   <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Paper</span>
                   </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                </span>
+                <span class="link-block">
+                  <a href="http://arxiv.org/abs/2409.13158" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/hrkM5N7AltY" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/hbai98/Hi_NeuS/tree/main"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -169,65 +166,64 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Hi-NeuS</span> turns object-centric videos from your phone into
-        3D digital assets.
-      </h2>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="content has-text-centered">
-<h2 class="title is-3">Motivation</h2>
-      <img src="./static/images/problem.png" class="img-responsive center" alt="vis_res" style="width:800px;height:auto;">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Hi-NeuS</span> turns object-centric videos from your phone into
+          3D digital assets.
+        </h2>
       </div>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Hi-NeuS</span> recover compact and precise surfaces without multi-view object
-        masks.
-      </h2>
     </div>
-  </div>
-</div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="content has-text-centered">
+          <h2 class="title is-3">Motivation</h2>
+          <img src="./static/images/problem.png" class="img-responsive center" alt="vis_res"
+            style="width:800px;height:auto;">
+        </div>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Hi-NeuS</span> recover compact and precise surfaces without multi-view object
+          masks.
+        </h2>
+      </div>
+    </div>
+    </div>
 
-</div>
-</section>
+    </div>
+  </section>
 
 
 
-<section class="section">
-  <div class="container is-max-desktop">
+  <section class="section">
+    <div class="container is-max-desktop">
 
-        <h2 class="title is-3">Comparison</h2>
-        <div class="container is-max-desktop">
-          <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/compact.mp4"
-                      type="video/mp4">
-            </video>
+      <h2 class="title is-3">Comparison</h2>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/compact.mp4" type="video/mp4">
+          </video>
 
-    <!-- <div class="level">
+          <!-- <div class="level">
       <div class="level-item">
         <model-viewer src="static/meshes/hi_neus_neus_dtu_scan114_colored.glb" poster="static/meshes/hi_neus_neus_dtu_scan114_colored.png" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
       </div> -->
-      <!-- <div class="level-item">
+          <!-- <div class="level-item">
         <model-viewer src="meshes/luigi.glb" poster="meshes/luigi.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
       </div>
       <div class="level-item">
@@ -236,314 +232,332 @@
       <div class="level-item">
         <model-viewer src="meshes/toy.glb" poster="meshes/toy.jpg" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
       </div> -->
-    <!-- </div> -->
+          <!-- </div> -->
 
-    <section class="section">
-      <div class="container is-max-desktop">
-      <!--/ 1st -->
-        <div class="columns is-centered">
-          <!-- Visual Effects. -->
-          <div class="column">
-            <div class="content">
-              <h2 class="title is-3">NeuS</h2>
-              <!-- <p>
+          <section class="section">
+            <div class="container is-max-desktop">
+              <!--/ 1st -->
+              <div class="columns is-centered">
+                <!-- Visual Effects. -->
+                <div class="column">
+                  <div class="content">
+                    <h2 class="title is-3">NeuS</h2>
+                    <!-- <p>
                 we demonstrate that GSP, with 
                 the addition of nearly soft shadows, significantly improves 
                 visual realism compared to vanilla 3DGS. Without these 
                 shadows, objects appear like flat layers pasted onto the 
                 background, lacking a sense of depth.
               </p> -->
-              <div class="video-compare-container">
-                <video class="video" id="24_neus" loop playsinline autoPlay muted
-                    src="./static/videos/24_neus.mp4" onplay="resizeAndPlay(this)">
-                </video>
-                <canvas height=0 class="videoMerge" id="24_neusMerge" style="width: 100%;"></canvas>
-                <div class="overlay-text text-top-left">Baseline</div>
-                <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-              </div>
-            </div>
-          </div>
-          <!--/ Visual Effects. -->
-    
-          <div class="column">
-            <h2 class="title is-3">Neuralangelo</h2>
-            <div class="columns is-centered">
-              <div class="column content">
-                <!-- <p>
+                    <div class="video-compare-container">
+                      <video class="video" id="24_neus" loop playsinline autoPlay muted
+                        src="./static/videos/24_neus.mp4" onplay="resizeAndPlay(this)">
+                      </video>
+                      <canvas height=0 class="videoMerge" id="24_neusMerge" style="width: 100%;"></canvas>
+                      <div class="overlay-text text-top-left">Baseline</div>
+                      <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Visual Effects. -->
+
+                <div class="column">
+                  <h2 class="title is-3">Neuralangelo</h2>
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <!-- <p>
                   we compare fluids
                   rendered using purely diffuse materials with those that incorporated 
                   specular reflections. The fluids without specular
                   reflection appear almost smoke-like, while the inclusion of
                   specular term significantly enhances the realism of the fluids.
                 </p> -->
-                <div class="video-compare-container">
-                  <video class="video" id="24_neural" loop playsinline autoPlay muted
-                      src="./static/videos/24_neural.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="24_neuralMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      <div class="video-compare-container">
+                        <video class="video" id="24_neural" loop playsinline autoPlay muted
+                          src="./static/videos/24_neural.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="24_neuralMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <!--/ 2nd -->
+
+              <div class="columns is-centered">
+                <!-- Matting. -->
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container" style="padding-right: 10px;">
+                        <video class="video" id="105_neus" loop playsinline autoPlay muted
+                          src="./static/videos/105_neus.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="105_neusMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Matting. -->
+
+                <!-- Matting. -->
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container">
+                        <video class="video" id="105_neural" loop playsinline autoPlay muted
+                          src="./static/videos/105_neural.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="105_neuralMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ 3rd. -->
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container" style="padding-right: 10px;">
+                        <video class="video" id="clock" loop playsinline autoPlay muted src="./static/videos/clock.mp4"
+                          onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="clockMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container">
+                        <video class="video" id="83_neural" loop playsinline autoPlay muted
+                          src="./static/videos/83_neural.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="83_neuralMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--/ 4th. -->
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container" style="padding-right: 10px;">
+                        <video class="video" id="bear" loop playsinline autoPlay muted src="./static/videos/bear.mp4"
+                          onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="bearMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container">
+                        <video class="video" id="65_neural" loop playsinline autoPlay muted
+                          src="./static/videos/65_neural.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="65_neuralMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Baseline</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--/ 5th. -->
+              <h3 class="title is-3">Gaussian Surfels</h3>
+
+              <div class="columns is-centered">
+                <!-- Visual Effects. -->
+                <div class="column">
+                  <div class="content">
+                    <div class="video-compare-container">
+                      <video class="video" id="jade" loop playsinline autoPlay muted src="./static/videos/jade.mp4"
+                        onplay="resizeAndPlay(this)">
+                      </video>
+                      <canvas height=0 class="videoMerge" id="jadeMerge" style="width: 100%;"></canvas>
+                      <div class="overlay-text text-top-left">Gaussian Surfels</div>
+                      <div class="overlay-text text-top-right">Hi-NeuS(NeuS)</div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Visual Effects. -->
+
+                <div class="column">
+                  <div class="columns is-centered">
+                    <div class="column content">
+                      <div class="video-compare-container">
+                        <video class="video" id="sculpture" loop playsinline autoPlay muted
+                          src="./static/videos/sculpture.mp4" onplay="resizeAndPlay(this)">
+                        </video>
+                        <canvas height=0 class="videoMerge" id="sculptureMerge" style="width: 100%;"></canvas>
+                        <div class="overlay-text text-top-left">Gaussian Surfels</div>
+                        <div class="overlay-text text-top-right">Hi-NeuS(NeuS)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <!--/ Abstract. -->
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <div class="content has-text-centered">
+                <h2 class="title is-3">Method</h2>
+                <img src="./static/images/overview.png" class="img-responsive center" alt="vis_res"
+                  style="width:800px;height:auto;">
+              </div>
+              <div class="content has-text-justified">
+                <h4>(a) Comparison on surface reconstruction without masks</h2>
+                  <p>We aim to reduce the noise in surface reconstruction without relying on multi-view object masks.
+                    Compared to existing methods, Hi-NeuS produces compact and more precise mesh results, enhancing its
+                    utility for downstream applications in virtual reality.</p>
+
+                  <h4>(b) Self-supervised geometry refinement</h2>
+                    <p>The rendering weights from multiple views are accumulated, corresponding to resampled target
+                      surface points <font color="red">x<sub>t</sub></font> (red). Based on this supervision, we advance
+                      query points <font color="blue">x<sub>i</sub></font> (blue) to obtain the predicted surface points
+                      <font color="teal">x<sub>q</sub></font> (green). We then align them using Chamfer Distance (CD)
+                      with global geometric constraints related to SDF.</p>
               </div>
             </div>
           </div>
+          <!-- Paper video. -->
+
+          <!--/ Paper video. -->
         </div>
-        <!--/ 2nd -->
-    
+
+
+
+
+        <!--/ Matting. -->
+
+        <!-- Animation. -->
         <div class="columns is-centered">
-          <!-- Matting. -->
-          <div class="column">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Animation</h2>
+
+            <!-- Interpolating. -->
+            <h3 class="title is-4">Training Process</h3>
+            <div class="content has-text-justified">
+              <p>
+                We visualize the global geometric refinement process here. Use the slider to see the difference between
+                Neuralangelo and Hi-NeuS based on the backbone.
+                Note that the difference is more obvious at the begining part of the training process.
+              </p>
+            </div>
+
+            <!-- Duplicate Interpolating Panel -->
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-3 has-text-centered">
+                <img src="./static/images/xiaoxin.png" class="interpolation-image"
+                  alt="Interpolate start reference image." />
+                <p>Ground Truth</p>
+              </div>
+              <div class="column interpolation-video-column has-text-centered">
+                <div id="interpolation-image-wrapper-2">
+                  Loading...
+                </div>
+                <input class="slider is-fullwidth is-large is-info" id="interpolation-slider-2" step="1" min="0"
+                  max="100" value="0" type="range">
+                <p>NeuS
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Hi-NeuS(NeuS)</p>
+              </div>
+            </div>
+            <br />
+            <div class="columns is-vcentered interpolation-panel">
+              <div class="column is-3 has-text-centered">
+                <img src="./static/images/114.png" class="interpolation-image"
+                  alt="Interpolate start reference image." />
+                <p>Ground Truth</p>
+              </div>
+              <div class="column interpolation-video-column has-text-centered">
+                <div id="interpolation-image-wrapper-1">
+                  Loading...
+                </div>
+                <input class="slider is-fullwidth is-large is-info" id="interpolation-slider-1" step="1" min="0"
+                  max="100" value="0" type="range">
+                <p>Neuralangelo
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Hi-NeuS(Neuralangelo)</p>
+              </div>
+            </div>
+            <br />
+            <!--/ Interpolating. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/hrkM5N7AltY" title=""
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
+                </div>
+
+              </div>
+            </div>
+            <!--/ Animation. -->
+
+
+            <!-- Concurrent Work. -->
             <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container" style="padding-right: 10px;">
-                  <video class="video" id="105_neus" loop playsinline autoPlay muted
-                      src="./static/videos/105_neus.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="105_neusMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
+              <div class="column is-full-width">
+                <h2 class="title is-3">Related Links</h2>
+
+                <div class="content has-text-justified">
+                  <p>
+                    Note that our expeiements are based on the following works:
+                  </p>
+                  <p>
+                    Both <a href="https://arxiv.org/abs/2106.10689">NeuS</a> and its variant <a
+                      href="https://arxiv.org/abs/2306.03092">Neuralangelo</a> shares the same SDF-based volume
+                    rendering,
+                    allowing for easy integration of our self-supervised geometry refinement method into these
+                    backbones, as shown in (b) of our method above, to enhance surface reconstruction.
+                    Note that apart from our Hi-NeuS hyperparameters, we employ the <a
+                      href="https://github.com/Totoro97/NeuS/blob/main/confs/womask.conf">NeuS</a> and <a
+                      href="https://github.com/NVlabs/neuralangelo/blob/main/projects/neuralangelo/configs/dtu.yaml">Neuralangelo</a>
+                    configurations available for all scenes without per-scene fine-tuning.
+                  </p>
+                  <p>
+                    Moreover, we also compare Hi-NeuS with the <a href="https://arxiv.org/abs/2404.17774">Gaussian
+                      Surfels</a>, excluding the use of multi-view object masks.
+                  </p>
                 </div>
               </div>
             </div>
+            <!--/ Concurrent Work. -->
+
           </div>
-          <!--/ Matting. -->
-    
-          <!-- Matting. -->
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container">
-                  <video class="video" id="105_neural" loop playsinline autoPlay muted
-                      src="./static/videos/105_neural.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="105_neuralMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/ 3rd. -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container" style="padding-right: 10px;">
-                  <video class="video" id="clock" loop playsinline autoPlay muted
-                      src="./static/videos/clock.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="clockMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container">
-                  <video class="video" id="83_neural" loop playsinline autoPlay muted
-                      src="./static/videos/83_neural.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="83_neuralMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  </section>
+  </section>
 
-        <!--/ 4th. -->
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container" style="padding-right: 10px;">
-                  <video class="video" id="bear" loop playsinline autoPlay muted
-                      src="./static/videos/bear.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="bearMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container">
-                  <video class="video" id="65_neural" loop playsinline autoPlay muted
-                      src="./static/videos/65_neural.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="65_neuralMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Baseline</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(Baseline)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <!--/ 5th. -->
-        <h3 class="title is-3">Gaussian Surfels</h3>
-
-        <div class="columns is-centered">
-          <!-- Visual Effects. -->
-          <div class="column">
-            <div class="content">
-              <div class="video-compare-container">
-                <video class="video" id="jade" loop playsinline autoPlay muted
-                    src="./static/videos/jade.mp4" onplay="resizeAndPlay(this)">
-                </video>
-                <canvas height=0 class="videoMerge" id="jadeMerge" style="width: 100%;"></canvas>
-                <div class="overlay-text text-top-left">Gaussian Surfels</div>
-                <div class="overlay-text text-top-right">Hi-NeuS(NeuS)</div>
-              </div>
-            </div>
-          </div>
-          <!--/ Visual Effects. -->
-    
-          <div class="column">
-            <div class="columns is-centered">
-              <div class="column content">
-                <div class="video-compare-container">
-                  <video class="video" id="sculpture" loop playsinline autoPlay muted
-                      src="./static/videos/sculpture.mp4" onplay="resizeAndPlay(this)">
-                  </video>
-                  <canvas height=0 class="videoMerge" id="sculptureMerge" style="width: 100%;"></canvas>
-                  <div class="overlay-text text-top-left">Gaussian Surfels</div>
-                  <div class="overlay-text text-top-right">Hi-NeuS(NeuS)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
-    </section>
-    
-    <!--/ Abstract. -->
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div class="content has-text-centered">
-          <h2 class="title is-3">Method</h2>
-        <img src="./static/images/overview.png" class="img-responsive center" alt="vis_res" style="width:800px;height:auto;">
-        </div>
-        <div class="content has-text-justified">
-          <h4>(a) Comparison on surface reconstruction without masks</h2>
-          <p>We aim to reduce the noise in surface reconstruction without relying on multi-view object masks. Compared to existing methods, Hi-NeuS produces compact and more precise mesh results, enhancing its utility for downstream applications in virtual reality.</p>
-          
-          <h4>(b) Self-supervised geometry refinement</h2>
-          <p>The rendering weights from multiple views are accumulated, corresponding to resampled target surface points <font color="red">x<sub>t</sub></font> (red). Based on this supervision, we advance query points <font color="blue">x<sub>i</sub></font> (blue) to obtain the predicted surface points <font color="teal">x<sub>q</sub></font> (green). We then align them using Chamfer Distance (CD) with global geometric constraints related to SDF.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Paper video. -->
-
-    <!--/ Paper video. -->
-  </div>
-
-
-
-
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-      <!-- Interpolating. -->
-      <h3 class="title is-4">Training Process</h3>
-      <div class="content has-text-justified">
-        <p>
-          We visualize the global geometric refinement process here. Use the slider to see the difference between Neuralangelo and Hi-NeuS based on the backbone.
-          Note that the difference is more obvious at the begining part of the training process.
-        </p>
-      </div>
-
-    <!-- Duplicate Interpolating Panel -->
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column is-3 has-text-centered">
-        <img src="./static/images/xiaoxin.png"
-             class="interpolation-image"
-             alt="Interpolate start reference image."/>
-        <p>Ground Truth</p>
-      </div>
-      <div class="column interpolation-video-column has-text-centered">
-        <div id="interpolation-image-wrapper-2">
-          Loading...
-        </div>
-        <input class="slider is-fullwidth is-large is-info"
-               id="interpolation-slider-2"
-               step="1" min="0" max="100" value="0" type="range">
-        <p>NeuS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi-NeuS(NeuS)</p>
-      </div>
-    </div>
-    <br/>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column is-3 has-text-centered">
-        <img src="./static/images/114.png"
-            class="interpolation-image"
-            alt="Interpolate start reference image."/>
-        <p>Ground Truth</p>
-      </div>
-      <div class="column interpolation-video-column has-text-centered">
-        <div id="interpolation-image-wrapper-1">
-          Loading...
-        </div>
-        <input class="slider is-fullwidth is-large is-info"
-              id="interpolation-slider-1"
-              step="1" min="0" max="100" value="0" type="range">
-        <p>Neuralangelo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi-NeuS(Neuralangelo)</p>
-      </div>
-    </div>
-    <br/>
-        <!--/ Interpolating. -->
-      <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/hrkM5N7AltY" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
-        </div>
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Note that our expeiements are based on the following works:
-          </p>
-          <p>
-            Both <a href="https://arxiv.org/abs/2106.10689">NeuS</a> and its variant <a href="https://arxiv.org/abs/2306.03092">Neuralangelo</a> shares the same SDF-based volume rendering, 
-            allowing for easy integration of our self-supervised geometry refinement method into these backbones, as shown in (b) of our method above, to enhance surface reconstruction.
-            Note that apart from our Hi-NeuS hyperparameters, we employ the <a href="https://github.com/Totoro97/NeuS/blob/main/confs/womask.conf">NeuS</a> and <a href="https://github.com/NVlabs/neuralangelo/blob/main/projects/neuralangelo/configs/dtu.yaml">Neuralangelo</a>  configurations available for all scenes without per-scene fine-tuning. 
-          </p>
-          <p>
-            Moreover, we also compare Hi-NeuS with the <a href="https://arxiv.org/abs/2404.17774">Gaussian Surfels</a>, excluding the use of multi-view object masks.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-</section>
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{bai2024highfidelitymaskfreeneuralsurface,
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{bai2024highfidelitymaskfreeneuralsurface,
       title={High-Fidelity Mask-free Neural Surface Reconstruction for Virtual Reality}, 
       author={Haotian Bai and Yize Chen and Lin Wang},
       year={2024},
@@ -553,41 +567,41 @@
       url={https://arxiv.org/abs/2409.13158}, 
 }
 </code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/hi-neus.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/hbai98" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://vlis2022.github.io/hi-neus">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/hi-neus.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/hbai98" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://vlis2022.github.io/hi-neus">source code</a> of this
+              website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
